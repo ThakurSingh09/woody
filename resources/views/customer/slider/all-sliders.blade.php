@@ -29,7 +29,7 @@
    </div>
    <div class="card card-primary">
       <div class="card-header">
-         <h3 class="card-title">All Sliders List</h3>
+         <h3 class="card-title">All Sliders List</h3>rerererer
       </div>
       <table id="myTable" class="table table-bordered table-striped">
          <thead>
