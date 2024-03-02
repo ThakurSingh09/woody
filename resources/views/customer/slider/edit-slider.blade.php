@@ -29,7 +29,7 @@
    </div> 
    <div class="card card-primary">
       <div class="card-header">
-         <h3 class="card-title">Edit Slider</h3>
+         <h3 class="card-title">Edit Sliderhjhjh</h3>
       </div>
       <form action="{{route('admin.update.slider', $sliders->id)}}" method="POST" enctype="multipart/form-data">
          @csrf 
