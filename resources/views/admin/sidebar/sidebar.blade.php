@@ -62,15 +62,9 @@
                </a>
                <ul class="nav nav-treeview">
                   <li class="nav-item">
-                     <a href="{{url('add-blog')}}"  class="nav-link">
-                        <i class="far fa-file-alt nav-icon"></i>
-                        <p>Add Blog</p>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="{{url('all-blog')}}" class="nav-link">
-                        <i class="far fa-file-alt nav-icon"></i>
-                        <p>All Blog</p>
+                     <a href="{{url('all-blogs-list')}}" class="nav-link">
+                    <i class="fas fa-arrow-right nav-icon"></i>
+                        <p>All Blogs</p>
                      </a>
                   </li>
                </ul>
@@ -86,15 +80,9 @@
                </a>
                <ul class="nav nav-treeview">
                   <li class="nav-item">
-                     <a href="{{url('add-service')}}"  class="nav-link">
-                        <i class="far fa-newspaper nav-icon"></i>
-                        <p>Add Service</p>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="{{url('all-service')}}" class="nav-link">
-                        <i class="far fa-newspaper nav-icon"></i>
-                        <p>All Service</p>
+                     <a href="{{url('admin/all-services-list')}}"  class="nav-link">
+                      <i class="fas fa-arrow-right nav-icon"></i>
+                        <p>All Services</p>
                      </a>
                   </li>
                </ul>
@@ -110,14 +98,8 @@
                </a>
                <ul class="nav nav-treeview">
                   <li class="nav-item">
-                     <a href="{{url('add-testimonial')}}"  class="nav-link">
-                        <i class="far fa-square nav-icon"></i>
-                        <p>Add Testimonial</p>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="{{url('all-testimonial')}}" class="nav-link">
-                        <i class="far fa-square nav-icon"></i>
+                     <a href="{{url('all-testimonials-list')}}" class="nav-link">
+                     <i class="fas fa-arrow-right nav-icon"></i>
                         <p>All Testimonial</p>
                      </a>
                   </li>

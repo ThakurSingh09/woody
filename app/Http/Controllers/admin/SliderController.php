@@ -24,13 +24,12 @@ class SliderController extends Controller
     public function submit_slider(Request $request){
         //Check if image is exit or not
         $filename = "";
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $file) {
-                $extension = $file->getClientOriginalExtension();
-                $filename = time() . '_' . uniqid() . '.' . $extension;
-                $file->move(public_path('uploads/admin/sliders'), $filename);
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move(public_path('uploads/admin/sliders'), $filename);   
         }
-
         //create slider
         $create_slider = Slider::create([
             'name' =>$request->name,
@@ -42,16 +41,13 @@ class SliderController extends Controller
         ]);
         //check if slider create or not
         if($create_slider){
-            $create_slider->images()->create([
-                'image_path' => $filename,
-            ]);
             return back()->with('success', 'Slider created successfully..');
         } else {
             return back()->with('unsuccess', 'Opps something went wrong..');
         }
     }
-
     
+    //Function for edit slider
     public function edit_slider($id){
     $sliders = Slider::find($id);
         return view('admin.slider.edit-slider', compact('sliders'));

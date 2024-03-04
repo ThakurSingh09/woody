@@ -68,29 +68,16 @@
                <label for="image">Image</label>
                <input type="file" name="image" value="" class="form-control">
             </div>
-            @if($sliders->count() > 0)
-    @foreach($sliders as $slider)
-        <div class="slider-container">
-            @if($slider->images->count() > 0)
-                @foreach($slider->images as $image)
-                    @if(file_exists(public_path('uploads/admin/sliders/'.$image->image_path)))
-                        <div class="image-wrapper">
-                            <img src="{{ asset('public/uploads/admin/sliders/'. $image->image_path)}}" width="120px" height="100px" alt="">
-                            <a class="delete-link" href="{{ url('admin/delete-attach', $slider->id) }}"><i class="fas fa-times"></i></a>
-                        </div>
-                    @endif
-                @endforeach
-            @else
-                No Image Available
-            @endif
-        </div><br><br>
-    @endforeach
-@else
-    No sliders available
-@endif
-
-
-
+            <div class="slider-container">
+            <div class="image-wrapper">
+               @if(!empty($sliders->image) && file_exists(public_path('uploads/admin/sliders/' . $sliders->image)))
+               <img src="{{ asset('public/uploads/admin/sliders/' . $sliders->image) }}" width="150px" height="130px" alt="">
+               <a class="delete-link" href="{{ url('admin/delete-attach', $sliders->id) }}"><i class="fas fa-times"></i></a>
+               @else
+                  No Image Available
+               @endif
+            </div>
+          </div>
             <div class="form-group">
                <label for="start_date">Start Date</label>
                <input type="date" id="date" name="start_date" value="{{$sliders->start_date}}" class="form-control">

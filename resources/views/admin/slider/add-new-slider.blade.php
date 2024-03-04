@@ -48,7 +48,7 @@
             </div>
             <div class="form-group">
                <label for="image">Image</label>
-               <input type="file"  name="images[]" multiple value="" class="form-control">
+               <input type="file"  name="image" multiple value="" class="form-control">
             </div>
             <div class="form-group">
                <label for="start_date">Start Date</label>

@@ -38,6 +38,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('admin/delete-attach/{id}', [App\Http\Controllers\Admin\SliderController::class, 'delete_attach']);
     Route::post('admin/update-slider/{id}', [App\Http\Controllers\Admin\SliderController::class, 'update_slider'])->name('admin.update.slider');
     Route::get('admin/delete-slider/{id}', [App\Http\Controllers\Admin\SliderController::class, 'delete_slider']);
+    Route::get('admin/all-services-list', [App\Http\Controllers\Admin\ServiceController::class, 'all_services']);
 });
 
 //Customer Only 

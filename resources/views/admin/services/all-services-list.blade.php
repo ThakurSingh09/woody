@@ -25,21 +25,18 @@
    </div>
    @endif 
    <div class="col-md-18 text-right">
-      <a href="{{ url('admin/add-new-slider') }}" class="btn btn-primary">Add New Slider</a>
+      <a href="{{ url('admin/add-new-service') }}" class="btn btn-primary">Add New Service</a>
    </div>
    <div class="card card-primary">
       <div class="card-header">
-         <h3 class="card-title">All Sliders List</h3>
+         <h3 class="card-title">All Services List</h3>
       </div>
       <table id="myTable" class="table table-bordered table-striped">
          <thead>
             <tr>
                <th>Sr.No</th>
                <th>Name</th>
-               <th>Short Desc</th>
-               <th>Long Desc</th>
-               <th>Start Date</th>
-               <th>End Date</th>
+               <th>Desc</th>
                <th>Image</th>
                <th>Status</th>
                <th>Action</th>
@@ -47,17 +44,14 @@
          </thead>
          <tbody>
             @php $count = 1; @endphp
-            @foreach($get_slider_lists as $list)
+            @foreach($get_service_lists as $list)
             <tr>
                <td>{{ $count++ }}</td>
                <td>{{ $list->name }}</td>
-               <td>{{ $list->short_desc }}</td>
-               <td>{{ $list->long_desc }}</td>
-               <td>{{ $list->start_date }}</td>
-               <td>{{ $list->end_date }}</td>
+               <td>{{ $list->desc }}</td>
                <td>
-               @if(!empty($list->image) && file_exists(public_path('uploads/admin/sliders/' . $list->image)))
-               <img src="{{ asset('public/uploads/admin/sliders/' . $list->image) }}" width="60px" height="40px" alt="">
+               @if(!empty($list->image) && file_exists(public_path('uploads/admin/services/' . $list->image)))
+               <img src="{{ asset('public/uploads/admin/services/' . $list->image) }}" width="60px" height="40px" alt="">
                @else
                  No Images Available
                @endif
